@@ -1,0 +1,26 @@
+<header class="top-bar sticky-top">
+  <!-- LOGO -->
+  <a href="/">
+    <img src="assets/images/logo.png" alt="Trade arena logo" class="logo" />
+  </a>
+
+  <!-- PROFILE -->
+  <div class="dropdown">
+    <button
+      class="bg-transparent border-0"
+      type="button"
+      data-bs-toggle="dropdown"
+      aria-expanded="true"
+    >
+      <img src="assets/images/user.png" alt="User avatar" class="user-avatar" />
+    </button>
+    <ul class="dropdown-menu">
+      <li><a href="#" class="dropdown-item">Perfil</a></li>
+      <li><a href="#" class="dropdown-item">Configurações</a></li>
+      <hr />
+      <li>
+        <button (click)="handleClick()" class="dropdown-item">Sair</button>
+      </li>
+    </ul>
+  </div>
+</header>
