@@ -44,10 +44,11 @@
   }
 
   .balance-card {
-    width: 210px;
+    width: 220px;
+    height: 220px;
     background-color: $component;
     border: 1px solid $border;
-    border-radius: 15px;
+    border-radius: 25px;
     box-shadow: 0px 8px 15px black;
     padding: 15px;
     transition: background 0.3s ease-in-out;
@@ -71,6 +72,7 @@
 }
 
 .input {
+  color: gray;
   padding: 8px;
   border: 0px;
   background-color: black;
@@ -84,23 +86,35 @@
 }
 
 .button {
+  color: gray;
   font-size: small;
   padding: 8px;
+
+  &:hover {
+    color: $primary;
+  }
 }
 
 // Input Section
 .finance-section {
   width: 80%;
-  gap: 20px;
+  gap: 3rem;
   
   .finance-card {
     max-width: 448px;
-    height: 380px;
+    height: 395px;
     background-color: $component;
     border: 1px solid $border;
-    border-radius: 15px;
+    border-radius: 25px;
     box-shadow: 0px 8px 15px black;
     padding: 15px;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+      transform: translateY(-5px);
+      box-shadow: 0px 10px 20px black;
+    }
   }
 
   .input-group {
