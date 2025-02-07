@@ -1,0 +1,27 @@
+@import "src/styles/theme";
+
+.banner {
+  display: block;
+  margin-inline: auto;
+  width: 90%;
+  margin-top: 20px;
+  height: 250px;
+  background: url("/assets/images/banner.png") center/cover no-repeat;
+  border-radius: 10px;
+
+  .banner-text {
+    top: 15%;
+    left: 0;
+    right: 0;
+    
+    p {
+      font-size: 12px;
+      line-height: 0.1;
+    }
+    
+    b {
+      font-size: 32px;
+      line-height: 1.2;
+    }
+  }
+}
