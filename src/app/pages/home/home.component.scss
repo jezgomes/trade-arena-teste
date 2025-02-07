@@ -50,6 +50,7 @@
     border-radius: 15px;
     box-shadow: 0px 8px 15px black;
     padding: 15px;
+    transition: background 0.3s ease-in-out;
 
     .balance-card-title {
       width: 50px;
@@ -61,6 +62,10 @@
       b {
         font-size: 32px;
       }
+    }
+
+    &:hover {
+      background: $background;
     }
   }
 }
@@ -75,7 +80,6 @@
   &:focus {
     outline: none;
     box-shadow: none;
-    border: 1px solid $border;
   }
 }
 
@@ -155,5 +159,85 @@
       -webkit-appearance: none;
       margin: 0;
     }
+  }
+}
+
+
+.title {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.extract-container {
+  width: 80%;
+  margin: 40px auto;
+
+  .extract-header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 15px;
+  }
+  
+  .extract-header select, input[type="date"] {
+    border: 1px solid $border;
+    border-radius: 8px;
+    padding: 8px 20px;
+    width: 200px;
+    color: gray;
+
+    &:focus {
+      border: 1px solid gray;
+      outline: none;
+      box-shadow: none;
+    }    
+  }
+
+  .extract-section {
+    border-radius: 12px;
+  }
+  
+  .extract-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 16px; // Aumentando para um efeito mais arredondado
+    overflow: hidden;
+    background-color: $component;
+    
+    thead {
+      color: gray; // Mantendo sem cor de fundo
+    }
+  
+    th, td {
+      padding: 20px; // Mais espaçamento interno para ficar semelhante à imagem
+      text-align: left;
+      border-bottom: 1px solid #333;
+    }
+  
+    th {
+      font-weight: bold;
+      color: white; // Melhorando a visibilidade do cabeçalho
+    }
+  
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+  
+    tbody tr {
+      transition: background 0.3s ease-in-out;
+  
+      &:hover {
+        background: rgba(255, 255, 255, 0.05); // Efeito hover discreto
+      }
+    }
+  }
+  
+  .positive {
+    color: #4CAF50;
+  }
+  
+  .negative {
+    color: #FF5252;
   }
 }

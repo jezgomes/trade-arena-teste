@@ -59,6 +59,7 @@
 
 <app-divider></app-divider>
 
+<!-- Finance section -->
 <section
   class="finance-section d-flex align-items-center mx-auto justify-content-center m-5"
 >
@@ -73,18 +74,15 @@
             <p class="float-start">Valor que deseja depositar</p>
             <input
               type="number"
-              id="deposit-value"
-              class="mt-1 form-control form-control-sm"
+              class="mt-1 text-center form-control form-control-sm"
             />
           </div>
-          <button class="btn bg-black text-white border-1 rounded mt-2">
-            Gerar pix
-          </button>
+          <button class="btn bg-black border-1 rounded mt-2">Gerar pix</button>
         </div>
         <div>
           <div class="qr-container">
             <img src="assets/images/qrcode.png" alt="QR Code image" />
-            <button class="btn bg-black text-white border-1 rounded mt-2">
+            <button class="btn bg-black border-1 rounded mt-2">
               Copiar código
             </button>
           </div>
@@ -105,8 +103,7 @@
       <p class="text-center small">Valor que deseja resgatar via PIX</p>
       <input
         type="number"
-        id="deposit-value"
-        class="mt-1 form-control form-control-sm"
+        class="mt-1 text-center form-control form-control-sm"
       />
       <select class="mt-2 text-center form-select form-select-sm">
         <option>Selecione sua chave PIX</option>
@@ -114,7 +111,7 @@
         <option>Chave aleatória</option>
         <option>E-mail</option>
       </select>
-      <button class="btn bg-black text-white border-1 rounded mt-2">
+      <button class="btn bg-black border-1 rounded mt-2">
         Solicitar resgate
       </button>
       <p class="expiration-text">
@@ -134,15 +131,92 @@
       </p>
       <input
         type="text"
-        id="deposit-value"
-        class="mt-1 form-control form-control-sm"
+        class="mt-1 text-center form-control form-control-sm"
       />
-      <button class="btn bg-black text-white border-1 rounded mt-2">
-        Validar
-      </button>
+      <button class="btn bg-black border-1 rounded mt-2">Validar</button>
       <p class="expiration-text">
         O valor creditado será descontado no seu próximo lucro.
       </p>
     </div>
   </div>
 </section>
+
+<app-divider></app-divider>
+
+<!-- Extract section -->
+<h3 class="title mt-5"><b>Extrato</b></h3>
+
+<div class="extract-container">
+  <!-- Header -->
+  <div class="extract-header">
+    <div class="d-flex gap-2">
+      <select class="extract-select form-select form-select-sm">
+        <option>Selecione pelo tipo</option>
+        <option>Abertura Conta Safe</option>
+        <option>Premiação Conta Safe</option>
+        <option>Recompensa diária</option>
+      </select>
+      <select class="extract-select form-select form-select-sm">
+        <option>10 mai - 20 mai</option>
+        <option>10 mai - 30 mai</option>
+        <option>10 mai - 10 jun</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Table -->
+  <section class="extract-section">
+    <table class="extract-table">
+      <thead>
+        <tr>
+          <td>Data da transação</td>
+          <td>Valor</td>
+          <td>Saldo</td>
+          <td>Informação adicional</td>
+          <td>Tipo</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transaction of transactions">
+          <td>{{ transaction.date }}</td>
+          <td>
+            <div
+              *ngFor="let value of transaction.values"
+              class="transaction-item"
+              [ngClass]="{
+                positive: value.startsWith('+'),
+                negative: value.startsWith('-')
+              }"
+            >
+              {{ value }}
+            </div>
+          </td>
+          <td>
+            <div
+              *ngFor="let balance of transaction.balances"
+              class="transaction-item"
+            >
+              {{ balance }}
+            </div>
+          </td>
+          <td>
+            <div
+              *ngFor="let info of transaction.additionalInfo"
+              class="transaction-item"
+            >
+              {{ info }}
+            </div>
+          </td>
+          <td>
+            <div
+              *ngFor="let type of transaction.types"
+              class="transaction-item"
+            >
+              {{ type }}
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
