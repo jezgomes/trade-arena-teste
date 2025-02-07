@@ -25,3 +25,40 @@
     }
   }
 }
+
+.balance-section {
+  margin-top: 35px;
+  width: 80%;
+  gap: 20px;
+
+  .balance-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .balance-text {
+    width: 450px;
+    margin-top: 14px;
+  }
+
+  .balance-card {
+    width: 210px;
+    background-color: $component;
+    border: 1px solid $border;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px black;
+    padding: 15px;
+
+    .balance-card-title {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+
+    .balance-card-value {
+      b {
+        font-size: 32px;
+      }
+    }
+  }
+}
