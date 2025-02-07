@@ -56,3 +56,93 @@
     </div>
   </div>
 </section>
+
+<app-divider></app-divider>
+
+<section
+  class="finance-section d-flex align-items-center mx-auto justify-content-center m-5"
+>
+  <!-- input card 1 -->
+  <div class="card text-center finance-card">
+    <div class="card-top text-primary pt-3"><b>DEPOSITAR</b></div>
+    <hr class="divider" />
+    <div class="card-body">
+      <div class="d-flex justify-content-between">
+        <div class="input-group d-flex flex-column align-items-start">
+          <div>
+            <p class="float-start">Valor que deseja depositar</p>
+            <input
+              type="number"
+              id="deposit-value"
+              class="mt-1 form-control form-control-sm"
+            />
+          </div>
+          <button class="btn bg-black text-white border-1 rounded mt-2">
+            Gerar pix
+          </button>
+        </div>
+        <div>
+          <div class="qr-container">
+            <img src="assets/images/qrcode.png" alt="QR Code image" />
+            <button class="btn bg-black text-white border-1 rounded mt-2">
+              Copiar código
+            </button>
+          </div>
+        </div>
+      </div>
+      <p class="expiration-text">
+        Este QR code expira em 30 minutos. Ao realizar o pagamento, você será
+        informado por e-mail.
+      </p>
+    </div>
+  </div>
+
+  <!-- input card 2 -->
+  <div class="card text-center finance-card">
+    <div class="card-top text-primary pt-3"><b>RESGATAR</b></div>
+    <hr class="divider" />
+    <div class="card-body gap-2">
+      <p class="text-center small">Valor que deseja resgatar via PIX</p>
+      <input
+        type="number"
+        id="deposit-value"
+        class="mt-1 form-control form-control-sm"
+      />
+      <select class="mt-2 text-center form-select form-select-sm">
+        <option>Selecione sua chave PIX</option>
+        <option>CPF</option>
+        <option>Chave aleatória</option>
+        <option>E-mail</option>
+      </select>
+      <button class="btn bg-black text-white border-1 rounded mt-2">
+        Solicitar resgate
+      </button>
+      <p class="expiration-text">
+        As transferências são aprovadas e realizadas em até 48h úteis. A conta
+        destino que receberá o resgate deve ser vinculada ao mesmo CPF/CNPJ do
+        seu cadastro.
+      </p>
+    </div>
+  </div>
+  <!-- input card 3 -->
+  <div class="card text-center finance-card">
+    <div class="card-top text-primary pt-3"><b>CUPOM</b></div>
+    <hr class="divider" />
+    <div class="card-body gap-2">
+      <p class="text-center small">
+        Insira o código abaixo para resgatar seu benefício
+      </p>
+      <input
+        type="text"
+        id="deposit-value"
+        class="mt-1 form-control form-control-sm"
+      />
+      <button class="btn bg-black text-white border-1 rounded mt-2">
+        Validar
+      </button>
+      <p class="expiration-text">
+        O valor creditado será descontado no seu próximo lucro.
+      </p>
+    </div>
+  </div>
+</section>
