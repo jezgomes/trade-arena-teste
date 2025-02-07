@@ -1,0 +1,15 @@
+$background: #121212;
+$component: #1B1C1D;
+$highlight: #ffcc00;
+$text: #ffffff;
+$border: #4A4A4A;
+$hover: #FFA726;
+
+$primary: #ff8c00;
+$secondary: #495057;
+$body-bg: $background;
+$body-color: $text;
+$border: $border;
+$warning: $highlight;
+
+@import "bootstrap"
