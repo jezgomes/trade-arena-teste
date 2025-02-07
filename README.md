@@ -1,27 +1,49 @@
-# TradeArenaTest
+# Trade Arena - Processo Seletivo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+Este repositório contém um projeto desenvolvido como parte de um processo seletivo para a empresa **Trade Arena**. O projeto foi criado utilizando **Angular 16**, **Bootstrap** e **SASS**.
 
-## Development server
+## Tecnologias Utilizadas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Angular 16** - Framework para desenvolvimento web.
+- **Bootstrap** - Biblioteca para estilização.
+- **SASS** - Processador de CSS para melhor organização dos estilos.
 
-## Code scaffolding
+## Estrutura do Projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+A estrutura do projeto foi organizada da seguinte maneira:
 
-## Build
+```
+app/
+├── components/        # Componentes reutilizáveis (top-bar, footer, etc.)
+├── mocks/             # Mocks utilizados para o processo.
+├── pages/             # Páginas do projeto
+└── app.module.ts      # Módulo principal do Angular
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Como Executar o Projeto
 
-## Running unit tests
+Para rodar o projeto localmente, siga os passos abaixo:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone este repositório:
+   ```sh
+   git clone https://github.com/jezgomes/trade-arena-teste.git
+   cd trade-arena
+   ```
 
-## Running end-to-end tests
+2. Instale as dependências:
+   ```sh
+   npm install
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Inicie o servidor de desenvolvimento:
+   ```sh
+   ng serve -o
+   ```
 
-## Further help
+4. Acesse o projeto no navegador:
+   ```
+   http://localhost:4200/
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Projeto desenvolvido para o processo seletivo da **Trade Arena** por **Jezreel Gomes**.
+
